@@ -1,6 +1,6 @@
 TW.IDE.Widgets.semaphore = function () {
 	this.widgetIconUrl = function() {
-		return  "'../Common/extensions/FoxonWidgets/ui/semaphore/semaphore.png'";
+		return  "'../Common/extensions/SemaphoreWidget/ui/semaphore/semaphore.png'";
 	};
 
 	this.widgetProperties = function () {
@@ -60,7 +60,7 @@ TW.IDE.Widgets.semaphore = function () {
 		// If you want it to change depending on properties that the user
 		// has set, you can use this.getProperty(propertyName).
 		// return any HTML you want rendered for your widget
-		var script = '<script src="../Common/extensions/FoxonWidgets/ui/semaphore/semaphore.js" type="text/javascript"></script>';
+		var script = '<script src="../Common/extensions/SemaphoreWidget/ui/semaphore/semaphore.js" type="text/javascript"></script>';
 		var html = '<div class="widget-content widget-semaphore">' +
 						'<div class="semaphore-wrapper">' +
 							'<div class="semaphore">' + 
