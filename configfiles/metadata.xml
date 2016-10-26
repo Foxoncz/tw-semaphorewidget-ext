@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage dependsOn="" description="" minimumThingWorxVersion="7.2.1" name="SemaphoreWidget" packageVersion="1.0.0" vendor="Foxon.cz"> 
+        </ExtensionPackage>
+    </ExtensionPackages>
+    <Widgets>
+		<Widget name="semaphore">
+            <UIResources>
+                <FileResource description="" file="semaphore.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+                <FileResource description="" file="semaphore.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+                <FileResource description="" file="semaphore.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="semaphore.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+            </UIResources>
+        </Widget>
+    </Widgets>
+</Entities>

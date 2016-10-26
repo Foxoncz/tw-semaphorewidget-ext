@@ -1,3 +1,9 @@
+.classpath
+.project
+.settings/
+node_modules/
+extension.properties
+
 *.class
 
 # Mobile Tools for Java (J2ME)
