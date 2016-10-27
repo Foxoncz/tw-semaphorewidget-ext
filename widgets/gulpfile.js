@@ -71,21 +71,21 @@ gulp.task('build:css', ['ide:scss', 'runtime:scss']);
 gulp.task('ide:js', function() {
     return gulp.src(widgets.semaphore.in.idejs)
         .pipe(concat(widgets.semaphore.out.idejs))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(widgets.semaphore.out.folder));
 });
 
 gulp.task('runtime:js', function() {
     return gulp.src(widgets.semaphore.in.runtimejs)
         .pipe(concat(widgets.semaphore.out.runtimejs))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(widgets.semaphore.out.folder));
 });
 
 gulp.task('dep:js', function() {
     return gulp.src(widgets.semaphore.in.depjs)
         .pipe(concat(widgets.semaphore.out.depjs))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(widgets.semaphore.out.folder));
 });
 
