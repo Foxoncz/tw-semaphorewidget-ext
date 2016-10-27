@@ -21,11 +21,12 @@ var widgets = {
   semaphore: {
     in: {
 	  folder: 'semaphore/',
+	  img: 'semaphore/semaphore.png',
 	  idejs: ['semaphore/semaphore.ide.js'],
       runtimejs: ['semaphore/semaphore.runtime.js'],
 	  depjs: ['semaphore/semaphore.js'],
       idescss: ['semaphore/semaphore.scss'],
-      runtimescss: ['semaphore/semaphore.scss'],
+      runtimescss: ['semaphore/semaphore.scss']
     },
     out: {
 	  folder: './../ui/semaphore/',
@@ -91,11 +92,16 @@ gulp.task('dep:js', function() {
 
 gulp.task('build:js', ['ide:js', 'runtime:js', 'dep:js']);
 
-gulp.task('build:extension', ['build:js', 'build:css'], function() {
+gulp.task('build:img', function() {
+    return gulp.src(widgets.semaphore.in.img)
+        .pipe(gulp.dest(widgets.semaphore.out.folder));
+});
+
+gulp.task('build:extension', ['build:js', 'build:css', 'build:img'], function() {
 	return exec.exec('ant build -f ./../build-extension.xml', function (err, stdout, stderr) {
 				//console.log(stdout);
 				console.log(stderr);
 			  });
 });
 
-gulp.task('default', ['build:js', 'build:css', 'build:extension']);
+gulp.task('default', ['build:js', 'build:css', 'build:img', 'build:extension']);
