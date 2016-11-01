@@ -11,8 +11,13 @@ TW.IDE.Widgets.semaphore = function () {
 			'properties': {
 				'State': {
 					'baseType': 'STRING',
-					'defaultValue': 'Red or Orange or Green',
-					'isBindingTarget': true
+					'defaultValue': 'Red',
+					'isBindingTarget': true,
+					'selectOptions': [
+                        { value: 'Red', text: 'Red' },
+                        { value: 'Orange', text: 'Orange' },
+                        { value: 'Green', text: 'Green' }
+                    ]
 				},
 				'Twostate': {
 					'baseType': 'BOOLEAN',
